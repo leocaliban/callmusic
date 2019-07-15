@@ -1,10 +1,100 @@
-@import "reset";
+@import "reset", "cores";
+@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
 
 body {
-    background-color: aqua;
+    margin: 0;
+    font: 100%/1.4 "Roboto", sans-serif;
+}
 
-    h1 {
-        color: red;
-        background-color: aliceblue;
+h1,
+h2 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 140%;
+}
+
+h2 {
+    font-size: 120%;
+}
+
+p {
+    margin: 0.6em 0;
+}
+
+
+.header {
+    height: 500px;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.13), #363749), url("../images/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__navbar {
+        box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.45);
+        padding: 0 40px;
+        position: absolute;
+        top: 20px;
+        height: 60px;
+        width: 100%;
+        background-color: $branco;
+        display: flex;
+        justify-content: space-between;
+
+        &__logo {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &__image {
+                height: 100%;
+            }
+
+            &__title {
+                color: rgb(51, 53, 72);
+                margin-left: 10px;
+                font-family: 'Barriecito', cursive;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+        }
+
+        &__menu {
+            height: 60px;
+            display: flex;
+
+            &__item {
+                align-self: stretch;
+                line-height: 60px;
+                font-weight: bold;
+                transition: all 0.4s linear;
+
+                a {
+                    display: block;
+                    padding: 0 10px;
+                    color: rgb(51, 53, 72);
+                    transition: all 0.4s linear;
+
+                    &:hover {
+                        color: $fonts;
+                    }
+                }
+
+                &:hover {
+                    background-color: $primary-shadow;
+                }
+
+                &--active {
+                    background-color: $primary-shadow;
+
+                    a {
+                        color: $fonts;
+                    }
+                }
+            }
+        }
     }
 }

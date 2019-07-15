@@ -23,7 +23,7 @@ gulp.task('html', () => {
 
 // image
 gulp.task('image', () => {
-    return gulp.src('source/assets/images/*')
+    return gulp.src('source/assets/images/**')
         .on('error', notify.onError('Erro: <%= error.message %>'))
         .pipe(gulp.dest('C:\\wamp\\www\\php\\callmusic\\assets\\images'));
 });
