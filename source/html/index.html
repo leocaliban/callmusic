@@ -6,36 +6,94 @@
     <title>CALLMUSIC</title>
     <meta name="description" content="Call and download Music!" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/all.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.min.css" />
 </head>
 
 <body>
     <header class="header">
-        <nav class="header__navbar">
-            <div class="header__navbar__logo">
-                <img class="header__navbar__logo__image" src="assets/images/logot.png" alt="Callmusic Logo">
-                <div class="header__navbar__logo__title">CallMusic</div>
-            </div>
-            <ul class="header__navbar__menu">
-                <li class="header__navbar__menu__item header__navbar__menu__item--active"><a href="#">Início</a></li>
-                <li class="header__navbar__menu__item"><a href="#">Generos</a></li>
-                <li class="header__navbar__menu__item"><a href="#">Bandas</a></li>
-                <li class="header__navbar__menu__item"><a href="#">Sobre</a></li>
-                <li class="header__navbar__menu__item"><a href="#">CallMusic</a></li>
-            </ul>
-        </nav>
     </header>
-
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <img class="navbar__logo__image" src="assets/images/logot.png" alt="Callmusic Logo">
+            <div class="navbar__logo__title">CallMusic</div>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item navbar__menu__item--active"><a href="#">Início</a></li>
+            <li class="navbar__menu__item"><a href="#">Gêneros</a></li>
+            <li class="navbar__menu__item"><a href="#">Bandas</a></li>
+            <li class="navbar__menu__item"><a href="#">CallMusic</a></li>
+        </ul>
+    </nav>
     <section class="section">
-        <aside>
-
+        <aside class="section__bandas">
+            <div class="section__bandas__titulo">
+                <i class="fas fa-headphones section__bandas__titulo__icon"></i>Bandas
+            </div>
+            <ol class="section__bandas__lista">
+                <li><a class="section__bandas__lista__item" href="#">36 Crazyfists</a></li>
+                <li><a class="section__bandas__lista__item" href="#">As I Lay Dying</a></li>
+                <li><a class="section__bandas__lista__item" href="#">Caliban</a></li>
+                <li><a class="section__bandas__lista__item" href="#">Good Charlotte</a></li>
+                <li><a class="section__bandas__lista__item" href="#">Lacuna Coil</a></li>
+                <li><a class="section__bandas__lista__item" href="#">Nightwish</a></li>
+                <li><a class="section__bandas__lista__item" href="#">Parkway Drive</a></li>
+                <li><a class="section__bandas__lista__item" href="asd">Sonata Arctica</a></li>
+                <li><a class="section__bandas__lista__item" href="#">The Rasmus</a></li>
+                <li><a class="section__bandas__lista__item" href="#">Vanilla Ninja</a></li>
+                <li><a class="section__bandas__lista__item" href="#">Whitin Temptation</a></li>
+            </ol>
         </aside>
-        <main>
-            <article>
+        <main class="section__main">
+            <article class="section__main__post">
+                <img class="section__main__post__capa" src="assets/images/c01.jpg"
+                    alt="Capa de CD - Frail Words Collapse">
+                <div class="section__main__post__cd">
+                    <div><strong>Banda: </strong> As I Lay Dying</div>
+                    <div><strong>Álbum: </strong>Frail Words Collapse</div>
+                    <div><strong>Ano: </strong>2003</div>
+                    <div><strong>Gênero: </strong>Metalcore</div>
+                    <div><strong>Tamanho: </strong>30mb</div>
+                    <button class="section__main__post__cd__download section__main__post__cd__download">
+                        <i class="fas fa-download"></i> Baixar</button>
+                </div>
+
+            </article>
+
+            <article class="section__main__post">
+                <img class="section__main__post__capa" src="assets/images/c02.jpg" alt="Capa de CD - Ecliptica">
+
+                <div class="section__main__post__cd">
+                    <div><strong>Banda: </strong> Sonata Arctica</div>
+                    <div><strong>Álbum: </strong> Ecliptica</div>
+                    <div><strong>Ano: </strong> 1999</div>
+                    <div><strong>Gênero: </strong> Power Metal</div>
+                    <div><strong>Tamanho: </strong> 30mb</div>
+                    <button class="section__main__post__cd__download section__main__post__cd__download">
+                        <i class="fas fa-download"></i> Baixar</button>
+                </div>
+
+            </article>
+
+            <article class="section__main__post">
+                <img class="section__main__post__capa" src="assets/images/c03.jpg" alt="Capa de CD - Delirium">
+
+                <div class="section__main__post__cd">
+                    <div><strong>Banda: </strong> Lacuna Coil</div>
+                    <div><strong>Álbum: </strong> Delirium</div>
+                    <div><strong>Ano: </strong> 2016</div>
+                    <div><strong>Gênero: </strong> Ghotic Metal</div>
+                    <div><strong>Tamanho: </strong> 90mb</div>
+                    <button class="section__main__post__cd__download section__main__post__cd__download">
+                        <i class="fas fa-download"></i> Baixar</button>
+                </div>
 
             </article>
         </main>
+
     </section>
+
+    <footer class="footer">DESIGNED BY <strong>Leocaliban</strong> &copy; 2019</footer>
 </body>
 
 </html>
