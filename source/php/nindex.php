@@ -28,7 +28,7 @@
     </nav>
 
     <section class="section">
-        <aside class="section__bandas">
+        <aside class="section__bandas section__bandas--moon">
             <div class="section__bandas__titulo">
                 <i class="fas fa-headphones section__bandas__titulo__icon"></i>Bandas
             </div>
@@ -42,35 +42,33 @@
                 $data = mysqli_query($dbc, $query);
 
                 while ($row = mysqli_fetch_array($data)) {
-                    echo ('<li><a class="section__bandas__lista__item" href="#" rel="noopener" target="_blank">' . $row['banda'] . '</a></li>');
+                    echo ('<li><a class="section__bandas__lista__item section__bandas__lista__item--moon" href="#" rel="noopener" target="_blank">' . $row['banda'] . '</a></li>');
                 }
                 ?>
             </ol>
         </aside>
-        <main class="section__main">
+        <main class="section__main section__main--moon">
             <?php
             $queryPosts = "SELECT * FROM post ORDER BY data_envio DESC";
             $dataPosts = mysqli_query($dbc, $queryPosts);
             while ($row = mysqli_fetch_array($dataPosts)) {
                 echo ('<article class="section__main__post">');
                 echo ('<img class="section__main__post__capa" src="assets/images/' . $row['imagem'] . '" alt="Capa de CD - ' . $row['album'] . '">');
-                echo ('<div class="section__main__post__cd">');
+                echo ('<div class="section__main__post__cd section__main__post__cd--moon">');
                 echo ('<div><strong>Banda: </strong>' . $row['banda'] . '</div>');
                 echo ('<div><strong>Álbum: </strong>' . $row['album'] . '</div>');
                 echo ('<div><strong>Ano: </strong>' . $row['ano'] . '</div>');
                 echo ('<div><strong>Gênero: </strong>' . $row['genero'] . '</div>');
                 echo ('<div><strong>Tamanho: </strong>' . $row['tamanho'] . 'MB</div>');
                 echo ('<a href="' . $row['link']  . '" rel="noopener" target="_blank">');
-                echo ('<button class="section__main__post__cd__download section__main__post__cd__download">');
+                echo ('<button class="section__main__post__cd__download section__main__post__cd__download--moon">');
                 echo ('<i class="fas fa-download"></i> Baixar</button></a></div></article>');
             }
             mysqli_close($dbc);
             ?>
         </main>
-    </section>
-
-    
-    <footer class="footer"><a href="nindex.php"><i class="fas fa-moon template"></i></a>DESIGNED BY <strong>Leocaliban</strong> &copy; 2019</footer>
+    </section>  
+    <footer class="footer"><a href="index.php"><i class="fas fa-sun template"></i></a>DESIGNED BY <strong>Leocaliban</strong> &copy; 2019</footer>
 </body>
 
 </html>
