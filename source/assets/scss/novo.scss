@@ -1,0 +1,91 @@
+@import "reset", "cores";
+
+.main {
+    background-color: $branco;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 500px;
+
+    &__titulo {
+        color: #575757;
+        border-bottom: 1px solid darken($color: #888888, $amount: 30%);
+    }
+
+    &__form-novo {
+
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+
+        &__group {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+            align-items: flex-start;
+
+            &__label {
+                font-weight: bold;
+                color: #575757;
+            }
+
+            &__input {
+                border: 1px solid #a0a0a0;
+                border-radius: 5px;
+                height: 25px;
+                align-self: stretch;
+
+                &:hover {
+                    border: 1px solid #616161;
+                }
+            }
+
+            &__button {
+                background-color: #7eaf47;
+                border-radius: 10px;
+                color: $fonts;
+                margin: 10px auto;
+                padding: 8px 15px;
+                cursor: pointer;
+                border: 2px solid #7eaf47;
+                font-weight: bold;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+                outline: none;
+                transition: all 0.2s ease-in-out;
+                width: 100%;
+
+                &:hover {
+                    box-shadow: 1px 1px 17px 0px rgba(0, 0, 0, 0.45);
+                    background-color: darken($color: #7eaf47, $amount: 20%);
+                }
+
+                &:focus {
+                    box-shadow: 1px 1px 17px 0px rgb(92, 126, 54);
+                    border: 2px solid darken($color: #7eaf47, $amount: 20%);
+                }
+
+                &:active {
+                    transform: translateY(.10em);
+                    box-shadow: 1px 5px 20px 0px rgba(0, 0, 0, 0.45);
+                }
+
+                &--imagem {
+                    background-color: #A35F39;
+
+                    border: 2px solid #A35F39;
+
+
+                    &:hover {
+                        background-color: darken($color: #A35F39, $amount: 20%);
+                    }
+
+                    &:focus {
+                        box-shadow: 1px 1px 17px 0px rgb(126, 113, 54);
+                        border: 2px solid darken($color: #A35F39, $amount: 20%);
+                    }
+
+                }
+            }
+        }
+    }
+}

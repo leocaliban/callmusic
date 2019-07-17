@@ -11,7 +11,65 @@
 </head>
 
 <body>
-<h1>NEW POST WORKS!!!</h1>
+    <nav class="navbar navbar--novo-post">
+        <div class="navbar__logo">
+            <img class="navbar__logo__image" src="assets/images/logot.png" alt="Callmusic Logo">
+            <div class="navbar__logo__title">CallMusic</div>
+        </div>
+        <ul class="navbar__menu navbar__menu--novo-post">
+            <li class="navbar__menu__item navbar__menu__item--active"><a href="#">Novo CD</a></li>
+            <li class="navbar__menu__item"><a href="index.php">Sair</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+
+        <h1 class="main__titulo">Postar novo CD</h1>
+        <form class="main__form-novo" enctype="multipart/form-data" method="post">
+            <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+
+            <div class="main__form-novo__group">
+                <label class="main__form-novo__group__label" for="banda">Banda</label>
+                <input class="main__form-novo__group__input" type="text" id="banda" name="banda" required />
+            </div>
+
+            <div class="main__form-novo__group">
+                <label class="main__form-novo__group__label" for="album">Álbum</label>
+                <input class="main__form-novo__group__input" type="text" id="album" name="album" required />
+            </div>
+
+            <div class="main__form-novo__group">
+                <label class="main__form-novo__group__label" for="genero">Gênero</label>
+                <input class="main__form-novo__group__input" type="text" id="genero" name="genero" required />
+            </div>
+
+            <div class="main__form-novo__group">
+                <label class="main__form-novo__group__label" for="ano">Ano</label>
+                <input class="main__form-novo__group__input" type="number" min="1950" max="2025" id="ano" name="ano"
+                    required />
+            </div>
+
+            <div class="main__form-novo__group">
+                <label class="main__form-novo__group__label" for="tamanho">Tamanho</label>
+                <input class="main__form-novo__group__input" type="number" id="tamanho" name="tamanho" required />
+            </div>
+
+            <div class="main__form-novo__group">
+                <label class="main__form-novo__group__label" for="link">Link para download</label>
+                <input class="main__form-novo__group__input" type="url" id="link" name="link" required />
+            </div>
+
+            <div class="main__form-novo__group">
+                <label class="main__form-novo__group__label" for="imagem">Capa do CD</label>
+                <input class="main__form-novo__group__button main__form-novo__group__button--imagem" type="file"
+                    id="imagem" name="imagem" required>
+            </div>
+
+            <div class="main__form-novo__group">
+                <input class="main__form-novo__group__button" type="submit" value="Enviar" name="submit" />
+            </div>
+        </form>
+    </main>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-@import "reset", "cores";
+@import "reset", "cores", "novo";
 @import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
 
 body {
@@ -67,6 +67,10 @@ p {
     justify-content: space-between;
     flex-wrap: wrap;
 
+    &--novo-post {
+        justify-content: flex-start;
+    }
+
     &__logo {
         height: 60px;
         display: flex;
@@ -89,6 +93,10 @@ p {
     &__menu {
         display: flex;
         flex-wrap: wrap;
+
+        &--novo-post {
+            margin-left: 10px;
+        }
 
         &__item {
             align-self: stretch;
@@ -230,7 +238,7 @@ p {
                 color: #363749;
                 width: 200px;
 
-                &--moon{
+                &--moon {
                     color: $branco;
                 }
 
@@ -248,9 +256,10 @@ p {
                     transition: all 0.2s ease-in-out;
                     width: 100%;
 
-                    &--moon{
+                    &--moon {
                         color: black;
                     }
+
                     &:hover {
                         box-shadow: 1px 1px 17px 0px rgba(0, 0, 0, 0.45);
                         background-color: darken($color: #7eaf47, $amount: 20%);
@@ -291,7 +300,6 @@ p {
     padding: 8px;
     border: 1px solid darken($color: #cccccc, $amount: 20%);
 }
-
 
 @media screen and (min-width: 31.8em) {
     .navbar {

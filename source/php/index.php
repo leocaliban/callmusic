@@ -23,7 +23,7 @@
             <li class="navbar__menu__item"><a href="#">Gêneros</a></li>
             <li class="navbar__menu__item"><a href="#">Bandas</a></li>
             <li class="navbar__menu__item"><a href="#">CallMusic</a></li>
-            <li class="navbar__menu__item"><a href="new-post.html">Admin</a></li>
+            <li class="navbar__menu__item"><a href="new-post.php">Admin</a></li>
         </ul>
     </nav>
 
