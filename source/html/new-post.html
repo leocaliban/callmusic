@@ -22,54 +22,88 @@
         </ul>
     </nav>
 
-    <main class="main">
+    <section class="novo">
+        <main class="box">
+            <h1 class="box__titulo">Postar novo CD</h1>
+            <form class="box__form-novo" enctype="multipart/form-data" method="post">
+                <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
 
-        <h1 class="main__titulo">Postar novo CD</h1>
-        <form class="main__form-novo" enctype="multipart/form-data" method="post">
-            <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                <div class="box__form-novo__group">
+                    <label class="box__form-novo__group__label" for="banda">Banda</label>
+                    <input class="box__form-novo__group__input" type="text" id="banda" name="banda" required />
+                </div>
 
-            <div class="main__form-novo__group">
-                <label class="main__form-novo__group__label" for="banda">Banda</label>
-                <input class="main__form-novo__group__input" type="text" id="banda" name="banda" required />
+                <div class="box__form-novo__group">
+                    <label class="box__form-novo__group__label" for="album">Álbum</label>
+                    <input class="box__form-novo__group__input" type="text" id="album" name="album" required />
+                </div>
+
+                <div class="box__form-novo__group">
+                    <label class="box__form-novo__group__label" for="genero">Gênero</label>
+                    <input class="box__form-novo__group__input" type="text" id="genero" name="genero" required />
+                </div>
+
+                <div class="box__form-novo__group">
+                    <label class="box__form-novo__group__label" for="ano">Ano</label>
+                    <input class="box__form-novo__group__input" type="number" min="1950" max="2025" id="ano" name="ano"
+                        required />
+                </div>
+
+                <div class="box__form-novo__group">
+                    <label class="box__form-novo__group__label" for="tamanho">Tamanho</label>
+                    <input class="box__form-novo__group__input" type="number" id="tamanho" name="tamanho" required />
+                </div>
+
+                <div class="box__form-novo__group">
+                    <label class="box__form-novo__group__label" for="link">Link para download</label>
+                    <input class="box__form-novo__group__input" type="url" id="link" name="link" required />
+                </div>
+
+                <div class="box__form-novo__group">
+                    <label class="box__form-novo__group__label" for="imagem">Capa do CD</label>
+                    <input class="box__form-novo__group__button box__form-novo__group__button--imagem" type="file"
+                        id="imagem" name="imagem" required>
+                </div>
+
+                <div class="box__form-novo__group">
+                    <input class="box__form-novo__group__button" type="submit" value="Enviar" name="submit" />
+                </div>
+            </form>
+        </main>
+
+        <summary class="box box--2">
+            <h1 class="box__titulo">Seu CD foi postado!</h1>
+            <figure class="box__figure">
+                <img class="box__figure__capa" src="assets/images/c01.jpg" alt="Capa de CD - Frail Words Collapse">
+            </figure>
+            <hr />
+            <div class="box__form-novo__group box__form-novo__group--sumary">
+                <label class="box__form-novo__group__label">Banda</label>
+                <p class="box__form-novo__group__value">As I Lay Dying</p>
             </div>
 
-            <div class="main__form-novo__group">
-                <label class="main__form-novo__group__label" for="album">Álbum</label>
-                <input class="main__form-novo__group__input" type="text" id="album" name="album" required />
+            <div class="box__form-novo__group box__form-novo__group--sumary">
+                <label class="box__form-novo__group__label">Álbum</label>
+                <p class="box__form-novo__group__value">Frail Words Collapse</p>
             </div>
 
-            <div class="main__form-novo__group">
-                <label class="main__form-novo__group__label" for="genero">Gênero</label>
-                <input class="main__form-novo__group__input" type="text" id="genero" name="genero" required />
+            <div class="box__form-novo__group box__form-novo__group--sumary">
+                <label class="box__form-novo__group__label">Ano</label>
+                <p class="box__form-novo__group__value">2003</p>
             </div>
 
-            <div class="main__form-novo__group">
-                <label class="main__form-novo__group__label" for="ano">Ano</label>
-                <input class="main__form-novo__group__input" type="number" min="1950" max="2025" id="ano" name="ano"
-                    required />
+            <div class="box__form-novo__group box__form-novo__group--sumary">
+                <label class="box__form-novo__group__label">Gênero</label>
+                <p class="box__form-novo__group__value">Metalcore</p>
             </div>
 
-            <div class="main__form-novo__group">
-                <label class="main__form-novo__group__label" for="tamanho">Tamanho</label>
-                <input class="main__form-novo__group__input" type="number" id="tamanho" name="tamanho" required />
+            <div class="box__form-novo__group box__form-novo__group--sumary">
+                <label class="box__form-novo__group__label">Tamanho</label>
+                <p class="box__form-novo__group__value">30MB</p>
             </div>
+        </summary>
+    </section>
 
-            <div class="main__form-novo__group">
-                <label class="main__form-novo__group__label" for="link">Link para download</label>
-                <input class="main__form-novo__group__input" type="url" id="link" name="link" required />
-            </div>
-
-            <div class="main__form-novo__group">
-                <label class="main__form-novo__group__label" for="imagem">Capa do CD</label>
-                <input class="main__form-novo__group__button main__form-novo__group__button--imagem" type="file"
-                    id="imagem" name="imagem" required>
-            </div>
-
-            <div class="main__form-novo__group">
-                <input class="main__form-novo__group__button" type="submit" value="Enviar" name="submit" />
-            </div>
-        </form>
-    </main>
 </body>
 
 </html>

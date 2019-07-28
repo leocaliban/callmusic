@@ -1,12 +1,23 @@
 @import "reset", "cores";
 
-.main {
+
+.novo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.box {
     background-color: $branco;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
     max-width: 500px;
 
+    &--2{
+        align-self: center;
+    }
     &__titulo {
         color: #575757;
         border-bottom: 1px solid darken($color: #888888, $amount: 30%);
@@ -24,9 +35,18 @@
             padding: 10px 0;
             align-items: flex-start;
 
+            &--sumary {
+                padding: 0 0 10px 0;
+            }
+
             &__label {
                 font-weight: bold;
                 color: #575757;
+            }
+
+            &__value {
+                color: #575757;
+                margin: 0;
             }
 
             &__input {
@@ -86,6 +106,22 @@
 
                 }
             }
+        }
+    }
+
+    &__figure {
+        max-width: 250px;
+        max-height: 250px;
+        border: 1px solid #cccccc;
+        padding: 1px;
+        margin: 10px auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.45);
+
+        &__capa {
+            padding: 2px;
+            width: 100%;
+            border-radius: 10px;
         }
     }
 }
